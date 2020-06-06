@@ -43,8 +43,7 @@ print('Test Accuracy: %.3f' % acc)
 # evaluate the model (Recall)
 from sklearn.metrics import recall_score
 recall_score(y, predictions, average='weighted')
-
+# summarize the first 200 prediction cases 
 predictions = model.predict_classes(X)
-# summarize the first 5 cases
 for i in range(200):
 	print('%s => %d (expected %d)' % (X[i].tolist(), predictions[i], y[i]))
